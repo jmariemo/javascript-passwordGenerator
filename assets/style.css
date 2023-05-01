@@ -1,3 +1,4 @@
+/* applies border-box to all elements */
 *,
 *::before,
 *::after {
@@ -12,6 +13,7 @@ body,
   padding: 0;
 }
 
+/* styling for body elements */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
@@ -93,10 +95,6 @@ button[disabled] {
   background: #c0c7cf;
 }
 
-.float-right {
-  float: right;
-}
-
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +116,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* responsive styling based on window size */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
