@@ -14,7 +14,7 @@ function generatePassword() {
   const lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
   const uppercaseCharacters = lowercaseCharacters.toUpperCase();
   const numericCharacters = "1234567890";
-  const specialCharacaters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ ";
+  const specialCharacaters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
   var includeLowercase = confirm("Include lowercase characters in password?");
   var includeUppercase = confirm("Include uppercase characters in password?");
