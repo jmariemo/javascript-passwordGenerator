@@ -1,6 +1,10 @@
+// defines variable generateBtn to later add event listener onto CSS button
 var generateBtn = document.querySelector("#generate");
 
-// this is the function to prompt user for all password preferences. this will all load before the click is heard, so that when click is heard the function prompts will roll
+// this is the function to prompt user for all password parameters 
+// this will all load before the click is heard
+// after click is heard, function writePassword will roll then prompting function generatePassword
+
 function generatePassword() {
   let passwordLength = parseInt(prompt("How long should password be?\nPlease enter number between 8 and 128."));
   if (passwordLength < 8 || passwordLength > 128) {
@@ -15,7 +19,6 @@ function generatePassword() {
   const uppercaseCharacters = lowercaseCharacters.toUpperCase();
   const numericCharacters = "1234567890";
   const specialCharacaters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-
   var includeLowercase = confirm("Include lowercase characters in password?");
   var includeUppercase = confirm("Include uppercase characters in password?");
   var includeNumeric = confirm("Include numbers in password?");
@@ -57,13 +60,14 @@ function generatePassword() {
   return results;
 }
 
-// Write password to the #password input
+// this function writes generated random password to the #password CSS box
+// defines password variable as results of generatePassword function
+// defines passwordText variable as output to #password CSS ID element
+// defines passwordText output value as the passord variable
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
